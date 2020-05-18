@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="bootstrap-4.5.0-dist/css/bootstrap.min.css">
+	<script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/custom.css">
+	<title>Show Date</title>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row" >
+			<div class="col-sm-12" style="height : 100px;"></div>
+		</div>
+		<div class="row justify-content-sm-center">
+			<h2 class="head">Stored List</h2>
+		</div>
+		<div class="row justify-content-sm-center">
+			<div class="col-sm-12 col-md-8 col-lg-6">
+				<table class="table table-striped" id="table">
+					<thead>
+						<tr>
+							<th>First Name</th>
+							<th>Last Name</th>
+							<th>Email</th>
+							<th></th>
+						</tr>
+					</thead>
+					
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	$(document).ready(function(){
+		var data = [{
+			fname : "Satyam",
+			lname : "Rai",
+			email : "satyamrai2606@gmail.com" 
+		},
+		{
+			fname : "Priyanshu",
+			lname : "Sharan",
+			email : "Priyanshu@gmail.com" 
+		},
+		{
+			fname : "Prasant",
+			lname : "Mahajan",
+			email : "Prasant@gmail.com" 
+		},
+		{
+			fname : "Nlend",
+			lname : "Gilbert",
+			email : "Gilbert@gmail.com" 
+		}
+		];
+
+		for(person of data){
+			var htmlToAppend = "";
+			htmlToAppend += "<tr>";
+			htmlToAppend = htmlToAppend + "<td>" + person.fname + "</td>";
+			htmlToAppend = htmlToAppend + "<td>" + person.lname + "</td>";
+			htmlToAppend = htmlToAppend + "<td>" + person.email + "</td>";
+			htmlToAppend = htmlToAppend + "<td>" + "<a href = 'EditForm.html'><img src='img/edit-icon-small.jpg' class='imagecontain'></a>" + "</td>";
+			$("#table").append(htmlToAppend);
+		}
+
+
+	})
+</script>
+</html>

@@ -1,0 +1,8 @@
+.head {
+	margin : 20px;
+	text-align: center;
+}
+.imagecontain {
+	object-fit: contain;
+	max-height: 25px;
+}
